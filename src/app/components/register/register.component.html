@@ -1,0 +1,142 @@
+<section class="register-block">
+    
+            <div class="col-md-12 register-sec pb-0 pt-0">
+                    <h2 class="text-center">Register Now</h2>
+            </div>
+            <form class="register-form col-md-12" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control is-invalid" 
+                            formControlName="FirstName" placeholder="First Name"
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" >
+                            
+                            <div *ngIf="submitted && f.FirstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.FirstName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" placeholder="Address Line 1"
+                            formControlName="AddressOne" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.AddressOne.errors }" >
+
+                            <div *ngIf="submitted && f.AddressOne.errors" class="invalid-feedback">
+                                <div *ngIf="f.AddressOne.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" placeholder="Town"
+                            formControlName="Town" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.Town.errors }" >
+
+                             <div *ngIf="submitted && f.Town.errors" class="invalid-feedback">
+                                <div *ngIf="f.Town.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <select id="" class="form-control" 
+                            formControlName="RegionId" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.RegionId.errors }" >
+                                <option value="" disabled selected>Choose your option</option>
+                                <option [value]="item.RegionId" *ngFor="let item of regions">{{item.Region}}</option>
+                            </select>
+
+                             <div *ngIf="submitted && f.RegionId.errors" class="invalid-feedback">
+                                <div *ngIf="f.RegionId.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" placeholder="Mobile Number"
+                            formControlName="Mobile" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.Mobile.errors }" >
+
+                            <div *ngIf="submitted && f.Mobile.errors" class="invalid-feedback">
+                                    <div *ngIf="f.Mobile.errors.required">First Name is required</div>
+                                </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" placeholder="Email Address"
+                            formControlName="Email" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" >
+
+                            <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                                <div *ngIf="f.Email.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" placeholder="Last Name"
+                            formControlName="LastName" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }" >
+
+                            <div *ngIf="submitted && f.LastName.errors" class="invalid-feedback">
+                                <div *ngIf="f.LastName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" placeholder="Address Line 2"
+                            formControlName="AddressTwo" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.AddressTwo.errors }">
+
+                            <div *ngIf="submitted && f.AddressTwo.errors" class="invalid-feedback">
+                                <div *ngIf="f.AddressTwo.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" 
+                            formControlName="Country" placeholder="Country"
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.Country.errors }" >
+
+                            <div *ngIf="submitted && f.Country.errors" class="invalid-feedback">
+                                    <div *ngIf="f.Country.errors.required">First Name is required</div>
+                                </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" placeholder="Post/ZipCode"
+                            formControlName="ZipCode" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.ZipCode.errors }" >
+
+                            <div *ngIf="submitted && f.ZipCode.errors" class="invalid-feedback">
+                                    <div *ngIf="f.ZipCode.errors.required">First Name is required</div>
+                                </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="text" class="form-control" placeholder="Credit Card Number"
+                            formControlName="CreditCard" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.CreditCard.errors }" >
+
+                            <div *ngIf="submitted && f.CreditCard.errors" class="invalid-feedback">
+                                <div *ngIf="f.CreditCard.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+                        <div class="md-form mt-0">
+                            <input type="password" class="form-control" placeholder="Password"
+                            formControlName="Password" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" >
+
+                            <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.Password.errors.required">First Name is required</div>
+                                </div>
+                        </div>
+                        <div class="form-check">
+                            <button type="submit" class="btn btn-register float-right">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- <div class="col-md-8 banner-sec">
+            </div> -->
+</section>

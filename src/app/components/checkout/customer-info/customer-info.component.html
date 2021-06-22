@@ -1,0 +1,63 @@
+
+    <div class="col-md order-md-1">
+        <div class="col-md-12 register-sec pb-0 pt-0">
+            <h2 class="text-center">Billing Address</h2>
+        </div>
+        <form class="needs-validation" #userDetailsForm="ngForm">
+            <div class="row">
+                
+                    <div class="col-md-6 mb-3">
+                        <div class="md-form mt-0">
+                        <label for="firstName">Full name</label>
+                        <input type="text" readonly class="form-control" id="" 
+                            name="firstName">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="md-form mt-0">
+                        <label for="email">Email
+                        </label>
+                        <input type="email" class="form-control" id=""  name="email"
+                            readonly>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="md-form mt-0">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="" placeholder="1234 Main St"
+                        name="address1" readonly>
+                </div>
+            </div>
+
+            <div class="md-form mt-0">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="" placeholder="Apartment or suite"
+                        name="address2" readonly>
+                </div>
+            </div>
+
+            <div class="md-form mt-0">
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <input type="text" class="form-control" id="" placeholder="Country"
+                            name="address2" readonly>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" id="" placeholder="City or Town"
+                            name="address2" readonly>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <input type="text" class="form-control" id="" placeholder="ZipCode"
+                            name="address2" readonly>
+                    </div>
+                </div>
+           </div>
+            <hr class="mb-4">
+
+        </form>
+    </div>
+    <div class="float-right">
+            <a class="btn btn-success " [routerLink]="['/checkout/payment-information']"
+                >Next</a>
+        </div>
